@@ -3,7 +3,7 @@ module Invitational
     extend ActiveSupport::Concern
 
     included do
-      belongs_to :invitable, :polymorphic => true
+      belongs_to :invitable, :optional => true, :polymorphic => true
 
       before_create :setup_hash
 
